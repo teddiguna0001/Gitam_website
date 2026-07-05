@@ -1,0 +1,388 @@
+<!Doctype html>
+<html>
+<head>
+    <title>GITAM Scholarships</title>
+    <style>
+        /* Reset & base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* Logo + Title */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 30px;
+            background: white;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #1a3c6e;
+        }
+
+        .header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header pre {
+            font-size: 55px;
+            margin: 0;
+            font-family:copper black;
+            color: #1a3c6e;
+            letter-spacing: 3px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: black;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px 30px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            padding: 6px 12px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            color: red;
+            text-decoration: underline;
+            background-color: black;
+        }
+
+        nav ul li a:active {
+            color: red;
+        }
+
+        /* Marquee */
+        .marquee-wrap {
+            background-color: green;
+            font-size: 40px;
+            padding: 8px 0;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Content */
+        .content {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px 40px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+        }
+
+        .content h1 {
+            color: #1a3c6e;
+            font-size: 36px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #1a3c6e;
+            padding-bottom: 10px;
+        }
+
+        .content h2 {
+            color: #1a3c6e;
+            font-size: 28px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content h3 {
+            color: #1a3c6e;
+            font-size: 22px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content ul,
+        .content ol {
+            padding-left: 35px;
+            margin: 10px 0 15px 0;
+        }
+
+        .content li {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 8px 0;
+        }
+
+        .main-img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-box {
+            background: #f0f4fa;
+            border-left: 5px solid #1a3c6e;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box h3 {
+            color: #1a3c6e;
+            margin-bottom: 8px;
+        }
+
+        .scholarship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .scholarship-card {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .scholarship-card:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .scholarship-card h4 {
+            color: #1a3c6e;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .scholarship-card .badge {
+            display: inline-block;
+            background: #1a3c6e;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .scholarship-card ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        .scholarship-card ul li {
+            font-size: 16px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header pre {
+                font-size: 32px;
+                min-width: 200px;
+            }
+            nav ul li a {
+                font-size: 18px;
+            }
+            .marquee-wrap {
+                font-size: 26px;
+            }
+            .content {
+                padding: 20px;
+                margin: 15px;
+            }
+            .content h1 {
+                font-size: 28px;
+            }
+            .content h2 {
+                font-size: 22px;
+            }
+            .content h3 {
+                font-size: 19px;
+            }
+            .scholarship-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header: Logo + University Name -->
+    <div class="header">
+        <img src="gitamlogo.jpg" alt="GITAM Logo">
+        <pre>GITAM DEEMED UNIVERSITY</pre>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="webpage.html">HOME</a></li>
+            <li><a href="webpageabout.html">ABOUT</a></li>
+            <li><a href="webpageugcourse.html">UG COURSES</a></li>
+            <li><a href="webpagepgcourse.html">PG COURSES</a></li>
+            <li><a href="webpagefee.html">FEES</a></li>
+            <li><a href="webpagescholarship.html">SCHOLARSHIP</a></li>
+            <li><a href="webpagefeedback.html">FEEDBACK</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+        <marquee>GITAM Deemed University — Scholarships for Bright Futures</marquee>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>🎓 Scholarships at GITAM</h1>
+
+        <p><strong>GITAM University</strong> (Gandhi Institute of Technology and Management) offers various scholarships based on merit, entrance exam performance, and financial need. These scholarships can cover a significant portion of tuition fees, potentially up to <strong>100%</strong>. Additionally, some scholarships include hostel fee support.</p>
+
+        <!-- Scholarship Image -->
+        <img src="gitammerit.jpg" class="main-img" alt="GITAM Merit Scholarships">
+
+        <h2>📋 Types of Scholarships</h2>
+
+        <div class="scholarship-grid">
+            <div class="scholarship-card">
+                <span class="badge">🏆 Merit-Based</span>
+                <h4>Merit Scholarships</h4>
+                <p>Awarded based on performance in entrance exams like:</p>
+                <ul>
+                    <li>GAT (GITAM Admission Test)</li>
+                    <li>GBAT (GITAM Business Admission Test)</li>
+                    <li>JEE Main</li>
+                    <li>EAMCET</li>
+                    <li>CUET</li>
+                    <li>SAT</li>
+                    <li>CAT / MAT / NMAT / CMAT</li>
+                </ul>
+            </div>
+
+            <div class="scholarship-card">
+                <span class="badge">💵 Need-Based</span>
+                <h4>Need-Based Scholarships</h4>
+                <p>Additional financial support for students from lower-income families. These scholarships help make quality education accessible to all deserving candidates.</p>
+            </div>
+
+            <div class="scholarship-card">
+                <span class="badge">🏠 Hostel</span>
+                <h4>Hostel Scholarships</h4>
+                <p>Discounts on hostel fees, particularly for students who have received tuition fee waivers. This helps reduce the overall cost of education.</p>
+            </div>
+
+            <div class="scholarship-card">
+                <span class="badge">⭐ Special</span>
+                <h4>Special Scholarships</h4>
+                <p>Dedicated scholarships for specific groups including:</p>
+                <ul>
+                    <li>CRPF personnel families</li>
+                    <li>Distinguished individuals</li>
+                    <li>Sports achievers</li>
+                    <li>Economically weaker sections</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>📊 Scholarship Details</h2>
+
+        <div class="highlight-box">
+            <h3>💰 Scholarship Slabs</h3>
+            <p>GITAM offers scholarship slabs of:</p>
+            <ul>
+                <li><strong>100%</strong> — Full tuition fee waiver</li>
+                <li><strong>75%</strong> — Three-fourths tuition fee waiver</li>
+                <li><strong>60%</strong> — Three-fifths tuition fee waiver</li>
+                <li><strong>40%</strong> — Two-fifths tuition fee waiver</li>
+                <li><strong>25%</strong> — One-fourth tuition fee waiver</li>
+                <li><strong>15%</strong> — Partial tuition fee waiver</li>
+            </ul>
+        </div>
+
+        <h3>📝 Entrance Exam Scholarships</h3>
+        <ul>
+            <li>Scholarships based on entrance exam scores (like GAT) are applicable for the <strong>first year</strong>.</li>
+            <li>Continuation in subsequent years is contingent on maintaining a <strong>CGPA of 8.0 or above</strong>.</li>
+        </ul>
+
+        <h3>🎯 Post-Interview Adjustment</h3>
+        <ul>
+            <li>Students eligible for <strong>60% or higher</strong> scholarships through merit may undergo a personal interview.</li>
+            <li>Scholarship slab may be <strong>adjusted</strong> based on interview performance.</li>
+        </ul>
+
+        <h3>⏳ First-Come, First-Served</h3>
+        <ul>
+            <li>Scholarship seats are <strong>limited</strong> and offered on a <strong>first-come, first-served basis</strong>.</li>
+            <li>Early application is highly recommended to secure your scholarship.</li>
+        </ul>
+
+        <h2>📚 Additional Information</h2>
+
+        <div class="highlight-box">
+            <h3>🧮 Scholarship Calculator</h3>
+            <p>GITAM provides a <strong>Scholarship Calculator</strong> to help students estimate their potential scholarship amount based on their entrance exam scores. Visit the admissions portal to use this tool.</p>
+        </div>
+
+        <div class="highlight-box">
+            <h3>🏦 Education Loans</h3>
+            <p>GITAM also supports students with <strong>education loans</strong> through partnerships with leading banks. Assistance is provided for loan processing and documentation.</p>
+        </div>
+
+        <div class="highlight-box">
+            <h3>🏛️ Government Scholarships</h3>
+            <p>Students may also be eligible for various <strong>government scholarships</strong> offered by the central and state governments.</p>
+        </div>
+
+        <h2>📝 How to Apply</h2>
+        <ol>
+            <li><strong>Entrance Exam-Based:</strong> Apply for the scholarship through the respective entrance exam application portals.</li>
+            <li><strong>Need-Based:</strong> Apply through GITAM's scholarship application portal, often linked to the admissions portal.</li>
+            <li><strong>Special Scholarships:</strong> Follow the application procedures specific to the particular scholarship.</li>
+        </ol>
+
+        <div class="highlight-box" style="border-left-color: #28a745;">
+            <h3>📞 Scholarship Helpline</h3>
+            <p><strong>Email:</strong> scholarships@gitam.edu</p>
+            <p><strong>Phone:</strong> +91-12345-67890 (Mon–Sat, 9:00 AM – 6:00 PM)</p>
+            <p><strong>Visit:</strong> GITAM Admissions Office, Visakhapatnam Campus</p>
+        </div>
+    </div>
+
+</body>
+</html>

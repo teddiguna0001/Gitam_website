@@ -1,0 +1,516 @@
+<!Doctype html>
+<html>
+<head>
+    <title>GITAM Feedback Form</title>
+    <style>
+        /* Reset & base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* Logo + Title - ORIGINAL STYLE (Logo left, Title right) */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 30px;
+            background: white;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #1a3c6e;
+        }
+
+        .header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header pre {
+            font-size: 55px;
+            margin: 0;
+            font-family:copper black;
+            color: #1a3c6e;
+            letter-spacing: 3px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: black;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px 30px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            padding: 6px 12px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            color: red;
+            text-decoration: underline;
+            background-color: black;
+        }
+
+        nav ul li a:active {
+            color: red;
+        }
+
+        /* Marquee */
+        .marquee-wrap {
+            background-color: green;
+            font-size: 40px;
+            padding: 8px 0;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 35px 45px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+        }
+
+        .content h1 {
+            color: #1a3c6e;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .content .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #1a3c6e;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .form-group label .required {
+            color: red;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #1a3c6e;
+            outline: none;
+            box-shadow: 0 0 8px rgba(26, 60, 110, 0.15);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Radio & Checkbox Groups */
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 25px;
+            padding-top: 5px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .radio-group input,
+        .checkbox-group input {
+            width: auto;
+            cursor: pointer;
+        }
+
+        /* Rating Stars */
+        .rating-group {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 10px;
+            padding-top: 5px;
+        }
+
+        .rating-group input {
+            display: none;
+        }
+
+        .rating-group label {
+            font-size: 35px;
+            color: #ddd;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .rating-group label:hover,
+        .rating-group label:hover ~ label,
+        .rating-group input:checked ~ label {
+            color: #f5b301;
+        }
+
+        /* Submit Button - GREEN, No Reset */
+        .form-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .btn-submit {
+            background: #28a745;
+            color: white;
+            padding: 16px 60px;
+            border: none;
+            border-radius: 50px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .btn-submit:hover {
+            background: #218838;
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .btn-submit:active {
+            transform: scale(0.98);
+        }
+
+        /* Success Message (hidden by default) */
+        .success-message {
+            display: none;
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Error Message */
+        .error-message {
+            display: none;
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .error-message.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header pre {
+                font-size: 32px;
+                min-width: 200px;
+            }
+            nav ul li a {
+                font-size: 18px;
+            }
+            .marquee-wrap {
+                font-size: 26px;
+            }
+            .content {
+                padding: 20px;
+                margin: 15px;
+            }
+            .content h1 {
+                font-size: 26px;
+            }
+            .radio-group,
+            .checkbox-group {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .btn-submit {
+                font-size: 18px;
+                padding: 14px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header: Logo + University Name - ORIGINAL STYLE (Left aligned) -->
+    <div class="header">
+        <img src="gitamlogo.jpg" alt="GITAM Logo">
+        <pre>GITAM DEEMED UNIVERSITY</pre>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="webpage.html">HOME</a></li>
+            <li><a href="webpageabout.html">ABOUT</a></li>
+            <li><a href="webpageugcourse.html">UG COURSES</a></li>
+            <li><a href="webpagepgcourse.html">PG COURSES</a></li>
+            <li><a href="webpagefee.html">FEES</a></li>
+            <li><a href="webpagescholarship.html">SCHOLARSHIP</a></li>
+            <li><a href="feedback.html" style="color: #ff6b6b;">FEEDBACK</a></li>
+        </ul>
+    </nav>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+        <marquee>GITAM Deemed University — We Value Your Feedback!</marquee>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="content">
+        <h1>📝 Feedback Form</h1>
+        <p class="subtitle">We value your opinion! Please share your experience with us.</p>
+
+        <!-- UPDATED: Form action connected to Formspree -->
+        <form id="feedbackForm" action="https://formspree.io/f/mvzjlzqr" method="POST" onsubmit="return submitFeedback(event)">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label>Full Name <span class="required">*</span></label>
+                <input type="text" id="fullname" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label>Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+
+            <!-- Student/Staff -->
+            <div class="form-group">
+                <label>You are a <span class="required">*</span></label>
+                <select id="role" name="role" required>
+                    <option value="">-- Select --</option>
+                    <option value="student">Student</option>
+                    <option value="faculty">Faculty Member</option>
+                    <option value="staff">Staff</option>
+                    <option value="parent">Parent</option>
+                    <option value="alumni">Alumni</option>
+                    <option value="visitor">Visitor</option>
+                </select>
+            </div>
+
+            <!-- Campus -->
+            <div class="form-group">
+                <label>Campus <span class="required">*</span></label>
+                <select id="campus" name="campus" required>
+                    <option value="">-- Select Campus --</option>
+                    <option value="visakhapatnam">Visakhapatnam</option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="bengaluru">Bengaluru</option>
+                </select>
+            </div>
+
+            <!-- Rating -->
+            <div class="form-group">
+                <label>Overall Rating <span class="required">*</span></label>
+                <div class="rating-group">
+                    <input type="radio" name="rating" id="star5" value="5">
+                    <label for="star5">★</label>
+                    <input type="radio" name="rating" id="star4" value="4">
+                    <label for="star4">★</label>
+                    <input type="radio" name="rating" id="star3" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" name="rating" id="star2" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" name="rating" id="star1" value="1" required>
+                    <label for="star1">★</label>
+                </div>
+            </div>
+
+            <!-- Feedback Type -->
+            <div class="form-group">
+                <label>Feedback Type <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label><input type="radio" name="feedbackType" value="suggestion" required> Suggestion</label>
+                    <label><input type="radio" name="feedbackType" value="complaint"> Complaint</label>
+                    <label><input type="radio" name="feedbackType" value="appreciation"> Appreciation</label>
+                    <label><input type="radio" name="feedbackType" value="query"> Query</label>
+                </div>
+            </div>
+
+            <!-- Areas to Improve -->
+            <div class="form-group">
+                <label>Areas to Improve (Select all that apply)</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="areas" value="infrastructure"> Infrastructure</label>
+                    <label><input type="checkbox" name="areas" value="teaching"> Teaching Quality</label>
+                    <label><input type="checkbox" name="areas" value="facilities"> Facilities</label>
+                    <label><input type="checkbox" name="areas" value="placement"> Placement Support</label>
+                    <label><input type="checkbox" name="areas" value="campus_life"> Campus Life</label>
+                    <label><input type="checkbox" name="areas" value="administration"> Administration</label>
+                </div>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+                <label>Your Feedback <span class="required">*</span></label>
+                <textarea id="message" name="message" placeholder="Please share your feedback in detail..." required></textarea>
+            </div>
+
+            <!-- Submit Button Only - GREEN -->
+            <div class="form-buttons">
+                <button type="submit" class="btn-submit">📤 Submit Feedback</button>
+            </div>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message">
+                ✅ Thank you for your valuable feedback! We appreciate your time.
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message">
+                ❌ Something went wrong. Please try again later.
+            </div>
+        </form>
+    </div>
+
+    <script>
+        async function submitFeedback(event) {
+            event.preventDefault();
+
+            // Get values
+            const name = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const role = document.getElementById('role').value;
+            const campus = document.getElementById('campus').value;
+            const rating = document.querySelector('input[name="rating"]:checked');
+            const feedbackType = document.querySelector('input[name="feedbackType"]:checked');
+            const message = document.getElementById('message').value.trim();
+
+            // Validation
+            if (!name || !email || !role || !campus || !rating || !feedbackType || !message) {
+                alert('Please fill in all required fields (marked with *)');
+                return false;
+            }
+
+            // Get form data
+            const form = document.getElementById('feedbackForm');
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('https://formspree.io/f/mvzjlzqr', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    const successMsg = document.getElementById('successMessage');
+                    successMsg.classList.add('show');
+                    document.getElementById('errorMessage').classList.remove('show');
+
+                    // Reset form after 3 seconds
+                    setTimeout(() => {
+                        form.reset();
+                        successMsg.classList.remove('show');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 3000);
+                } else {
+                    // Show error message
+                    document.getElementById('errorMessage').classList.add('show');
+                    document.getElementById('successMessage').classList.remove('show');
+                }
+            } catch (error) {
+                // Show error message
+                document.getElementById('errorMessage').classList.add('show');
+                document.getElementById('successMessage').classList.remove('show');
+            }
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>

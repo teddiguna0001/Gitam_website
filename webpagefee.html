@@ -1,0 +1,285 @@
+ <!Doctype html>
+<html>
+<head>
+    <title>GITAM Fees Structure</title>
+    <style>
+        /* Reset & base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* Logo + Title */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 30px;
+            background: white;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #1a3c6e;
+        }
+
+        .header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header pre {
+            font-size: 55px;
+            margin: 0;
+            font-family:copper black;
+            color: #1a3c6e;
+            letter-spacing: 3px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: black;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px 30px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            padding: 6px 12px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            color: red;
+            text-decoration: underline;
+            background-color: black;
+        }
+
+        nav ul li a:active {
+            color: red;
+        }
+
+        /* Marquee */
+        .marquee-wrap {
+            background-color: green;
+            font-size: 40px;
+            padding: 8px 0;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Content */
+        .content {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px 40px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+        }
+
+        .content h1 {
+            color: #1a3c6e;
+            font-size: 36px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #1a3c6e;
+            padding-bottom: 10px;
+        }
+
+        .content h2 {
+            color: #1a3c6e;
+            font-size: 26px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .fee-images {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .fee-images img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        .fee-images .img-label {
+            text-align: center;
+            font-weight: bold;
+            color: #1a3c6e;
+            font-size: 20px;
+            margin-top: -20px;
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: #f0f4fa;
+            border-left: 5px solid #1a3c6e;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box h3 {
+            color: #1a3c6e;
+            margin-bottom: 8px;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .fee-table th {
+            background: #1a3c6e;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .fee-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .fee-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .fee-table tr:hover {
+            background: #f0f4fa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header pre {
+                font-size: 32px;
+                min-width: 200px;
+            }
+            nav ul li a {
+                font-size: 18px;
+            }
+            .marquee-wrap {
+                font-size: 26px;
+            }
+            .content {
+                padding: 20px;
+                margin: 15px;
+            }
+            .content h1 {
+                font-size: 28px;
+            }
+            .content h2 {
+                font-size: 22px;
+            }
+            .fee-table th,
+            .fee-table td {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header: Logo + University Name -->
+    <div class="header">
+        <!-- Updated to use local gitamlogo.jpg -->
+        <img src="gitamlogo.jpg" alt="GITAM Logo">
+        <pre>GITAM DEEMED UNIVERSITY</pre>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="webpage.html">HOME</a></li>
+            <li><a href="webpageabout.html">ABOUT</a></li>
+            <li><a href="webpageugcourse.html">UG COURSES</a></li>
+            <li><a href="webpagepgcourse.html">PG COURSES</a></li>
+            <li><a href="webpagefee.html">FEES</a></li>
+            <li><a href="webpagescholarship.html">SCHOLARSHIP</a></li>
+	    <li><a href="webpagefeedback.html">FEEDBACK</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+        <marquee>GITAM Deemed University — Fee Structure 2025-26</marquee>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>📊 Fee Structure</h1>
+
+        <p>GITAM Deemed University offers a transparent and affordable fee structure across all programs. Below is the detailed fee breakdown for various UG and PG courses for the academic year <strong>2025-26</strong>.</p>
+
+        <div class="highlight-box">
+            <h3>💰 Payment Options</h3>
+            <ul>
+                <li>Annual Fee Payment</li>
+                <li>Semester-wise Payment</li>
+                <li>EMI Options Available</li>
+                <li>Education Loan Assistance</li>
+            </ul>
+        </div>
+
+         
+        <h2>📝 Additional Fees</h2>
+        <ul>
+            <li><strong>One-Time Registration Fee:</strong> ₹5,000</li>
+            <li><strong>Examination Fee:</strong> ₹2,500 per semester</li>
+            <li><strong>Library & Lab Fee:</strong> ₹3,000 per year</li>
+            <li><strong>Hostel Fee:</strong> ₹45,000 – ₹85,000 per year (depending on accommodation type)</li>
+            <li><strong>Transport Fee:</strong> ₹15,000 per year</li>
+        </ul>
+
+        <div class="highlight-box">
+            <h3>🎓 Scholarships Available</h3>
+            <p>GITAM offers various scholarships to deserving students based on merit, sports achievements, and economic background. Visit our <a href="webpagescholarship.html" style="color:#1a3c6e; font-weight:bold;">Scholarship Page</a> for more details.</p>
+        </div>
+
+        <h2>📞 Contact for Fee Queries</h2>
+        <p><strong>Admissions Office:</strong> +91-12345-67890</p>
+        <p><strong>Email:</strong> admissions@gitam.edu</p>
+        <p><strong>Fee Helpline:</strong> +91-98765-43210 (Mon–Sat, 9:00 AM – 6:00 PM)</p>
+    </div>
+
+</body>
+</html>

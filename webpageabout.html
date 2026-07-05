@@ -1,0 +1,304 @@
+<!Doctype html>
+<html>
+<head>
+    <title>GITAM Deemed University</title>
+    <style>
+        /* Reset & base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* Logo + Title */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 30px;
+            background: white;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #1a3c6e;
+        }
+
+        .header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header pre {
+            font-size: 55px;
+            margin: 0;
+            font-family:copper black;
+            color: #1a3c6e;
+            letter-spacing: 3px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: black;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px 30px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            padding: 6px 12px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            color: red;
+            text-decoration: underline;
+            background-color: black;
+        }
+
+        nav ul li a:active {
+            color: red;
+        }
+
+        /* Marquee */
+        .marquee-wrap {
+            background-color: green;
+            font-size: 40px;
+            padding: 8px 0;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Main Image */
+        .main-img {
+            width: 100%;
+            display: block;
+            margin: 0;
+        }
+
+        /* Content */
+        .content {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px 40px;
+            font-size: 18px;
+            line-height: 1.8;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+        }
+
+        .content h1 {
+            color: #1a3c6e;
+            font-size: 36px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #1a3c6e;
+            padding-bottom: 10px;
+        }
+
+        .content h2 {
+            color: #1a3c6e;
+            font-size: 26px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content ul,
+        .content ol {
+            padding-left: 35px;
+            margin: 10px 0 15px 0;
+        }
+
+        .content li {
+            margin: 8px 0;
+        }
+
+        .highlight-box {
+            background: #f0f4fa;
+            border-left: 5px solid #1a3c6e;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box h3 {
+            color: #1a3c6e;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header pre {
+                font-size: 32px;
+                min-width: 200px;
+            }
+            nav ul li a {
+                font-size: 18px;
+            }
+            .marquee-wrap {
+                font-size: 26px;
+            }
+            .content {
+                padding: 20px;
+                margin: 15px;
+            }
+            .content h1 {
+                font-size: 28px;
+            }
+            .content h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header: Logo + University Name -->
+    <div class="header">
+        <img src="gitamlogo.jpg" alt="GITAM Logo">
+        <pre>GITAM DEEMED UNIVERSITY</pre>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="webpage.html">HOME</a></li>
+            <li><a href="webpageabout.html">ABOUT</a></li>
+            <li><a href="webpageugcourse.html">UG COURSES</a></li>
+            <li><a href="webpagepgcourse.html">PG COURSES</a></li>
+            <li><a href="webpagefee.html">FEES</a></li>
+            <li><a href="webpagescholarship.html">SCHOLARSHIP</a></li>
+	    <li><a href="webpagefeedback.html">FEEDBACK</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+        <marquee>GITAM Deemed University — Shaping Futures Since 1980</marquee>
+    </div>
+
+     
+
+    <!-- Content — UPDATED ABOUT SECTION -->
+    <div class="content">
+        <h1>About GITAM Deemed University</h1>
+
+        <p><strong>GITAM (Gandhi Institute of Technology and Management)</strong> is a private deemed university established in 1980 in Visakhapatnam, Andhra Pradesh. With a rich legacy of over four decades, GITAM has evolved into a multidisciplinary institution offering world-class education across engineering, management, sciences, humanities, law, pharmacy, and more.</p>
+
+        <div class="highlight-box">
+            <h3>🏛️ Our Vision</h3>
+            <p>To become a global leader in higher education by fostering innovation, research, and holistic development, empowering students to contribute meaningfully to society and the nation.</p>
+        </div>
+
+        <div class="highlight-box">
+            <h3>🎯 Our Mission</h3>
+            <ul>
+                <li>To provide transformative education that blends academic excellence with ethical values.</li>
+                <li>To promote cutting-edge research and innovation across disciplines.</li>
+                <li>To nurture global citizens with leadership qualities, social responsibility, and entrepreneurial spirit.</li>
+                <li>To build strong industry-academia partnerships for enhanced learning and career opportunities.</li>
+            </ul>
+        </div>
+
+        <h2>🌟 Why GITAM?</h2>
+        <ul>
+            <li><strong>NAAC A+ Accreditation</strong> — Recognized for academic excellence and quality education.</li>
+            <li><strong>Global Collaborations</strong> — Partnerships with leading universities in the USA, UK, Australia, and Europe.</li>
+            <li><strong>State-of-the-Art Campus</strong> — Sprawling campuses in Visakhapatnam, Hyderabad, and Bengaluru with modern infrastructure.</li>
+            <li><strong>Industry-Ready Curriculum</strong> — Programs designed with input from industry experts to meet current market demands.</li>
+            <li><strong>Research & Innovation</strong> — Dedicated research centers, incubation cells, and startup support for students.</li>
+            <li><strong>Diverse Student Community</strong> — Students from over 25 states and 15+ countries, creating a vibrant multicultural environment.</li>
+        </ul>
+
+        <h2>📚 Academic Programs</h2>
+        <p>GITAM offers over 100+ programs across multiple disciplines:</p>
+        <ul>
+            <li><strong>Engineering & Technology</strong> — BTech, MTech, PhD in various specializations</li>
+            <li><strong>Management</strong> — BBA, MBA, PhD in Management</li>
+            <li><strong>Sciences</strong> — BSc, MSc, PhD in Physics, Chemistry, Mathematics, and Life Sciences</li>
+            <li><strong>Humanities & Social Sciences</strong> — BA, MA, and PhD programs</li>
+            <li><strong>Law</strong> — BA LLB, BBA LLB, LLM, and PhD in Law</li>
+            <li><strong>Pharmacy</strong> — BPharm, MPharm, and PhD programs</li>
+            <li><strong>Architecture & Planning</strong> — BArch and MPlan programs</li>
+        </ul>
+
+        <h2>🏆 Achievements & Rankings</h2>
+        <ul>
+            <li>Ranked among the <strong>Top 100 Universities</strong> in India by NIRF 2024.</li>
+            <li>Recognized as one of the <strong>Best Private Universities</strong> in South India.</li>
+            <li>Over <strong>90% placement</strong> record across all programs with leading recruiters like TCS, Infosys, Wipro, Amazon, Deloitte, and more.</li>
+            <li>More than <strong>500+ research publications</strong> annually in reputed journals.</li>
+            <li>Home to <strong>25+ research centers</strong> and innovation labs.</li>
+        </ul>
+
+        <h2>🌍 Global Presence</h2>
+        <p>GITAM has established strong international linkages through:</p>
+        <ul>
+            <li>Student exchange programs with universities in the USA, UK, Canada, and Australia.</li>
+            <li>Joint research initiatives with global academic institutions.</li>
+            <li>International faculty and visiting scholars who bring global perspectives to the classroom.</li>
+            <li>Study abroad opportunities and summer schools for students.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <h3>💡 GITAM at a Glance</h3>
+            <ul>
+                <li><strong>Established:</strong> 1980</li>
+                <li><strong>Founder:</strong> Dr. M.V.V.S. Murthi</li>
+                <li><strong>Campuses:</strong> Visakhapatnam, Hyderabad, Bengaluru</li>
+                <li><strong>Students:</strong> 15,000+</li>
+                <li><strong>Faculty:</strong> 1,200+</li>
+                <li><strong>Programs:</strong> 100+</li>
+                <li><strong>Accreditation:</strong> NAAC A+, NBA Accredited Programs</li>
+            </ul>
+        </div>
+
+        <h2>🤝 Industry Connect</h2>
+        <p>GITAM has strong ties with leading industry players to bridge the gap between academia and industry:</p>
+        <ul>
+            <li>Regular guest lectures, workshops, and seminars by industry experts.</li>
+            <li>Internships and live projects with corporate partners.</li>
+            <li>Corporate mentorship programs for students.</li>
+            <li>Industry-driven curriculum updates to align with current market trends.</li>
+        </ul>
+
+        <h2>📢 Message from the Vice-Chancellor</h2>
+        <p>"At GITAM, we believe in nurturing not just skilled professionals but responsible global citizens. Our commitment to academic excellence, research, and innovation drives us to create an ecosystem where every student can realize their full potential. We welcome you to be a part of the GITAM family and embark on a transformative educational journey."</p>
+
+        <p style="text-align: right; font-style: italic; color: #1a3c6e;">— Prof. K. S. Rao, Vice-Chancellor, GITAM Deemed University</p>
+
+        <p><strong>Join GITAM and be part of a legacy of excellence, innovation, and holistic development. Your future begins here!</strong></p>
+    </div>
+
+</body>
+</html>

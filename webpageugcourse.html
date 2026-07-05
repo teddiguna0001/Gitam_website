@@ -1,0 +1,358 @@
+<!Doctype html>
+<html>
+<head>
+    <title>GITAM UG Courses</title>
+    <style>
+        /* Reset & base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* Logo + Title */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 30px;
+            background: white;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #1a3c6e;
+        }
+
+        .header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header pre {
+            font-size: 55px;
+            margin: 0;
+            font-family:copper black;
+            color: #1a3c6e;
+            letter-spacing: 3px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: black;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px 30px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            padding: 6px 12px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            color: red;
+            text-decoration: underline;
+            background-color: black;
+        }
+
+        nav ul li a:active {
+            color: red;
+        }
+
+        /* Marquee */
+        .marquee-wrap {
+            background-color: green;
+            font-size: 40px;
+            padding: 8px 0;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Content */
+        .content {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px 40px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+        }
+
+        .content h1 {
+            color: #1a3c6e;
+            font-size: 36px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #1a3c6e;
+            padding-bottom: 10px;
+        }
+
+        .content h2 {
+            color: #1a3c6e;
+            font-size: 28px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content h3 {
+            color: #1a3c6e;
+            font-size: 22px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content ul,
+        .content ol {
+            padding-left: 35px;
+            margin: 10px 0 15px 0;
+        }
+
+        .content li {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 8px 0;
+        }
+
+        .highlight-box {
+            background: #f0f4fa;
+            border-left: 5px solid #1a3c6e;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box h3 {
+            color: #1a3c6e;
+            margin-bottom: 8px;
+        }
+
+        /* Course Grid */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .course-card {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            transition: 0.3s;
+            border-left: 4px solid #1a3c6e;
+        }
+
+        .course-card:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .course-card h4 {
+            color: #1a3c6e;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .course-card .badge {
+            display: inline-block;
+            background: #1a3c6e;
+            color: white;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header pre {
+                font-size: 32px;
+                min-width: 200px;
+            }
+            nav ul li a {
+                font-size: 18px;
+            }
+            .marquee-wrap {
+                font-size: 26px;
+            }
+            .content {
+                padding: 20px;
+                margin: 15px;
+            }
+            .content h1 {
+                font-size: 28px;
+            }
+            .content h2 {
+                font-size: 22px;
+            }
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header: Logo + University Name -->
+    <div class="header">
+        <img src="gitamlogo.jpg" alt="GITAM Logo">
+        <pre>GITAM DEEMED UNIVERSITY</pre>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="webpage.html">HOME</a></li>
+            <li><a href="webpageabout.html">ABOUT</a></li>
+            <li><a href="webpageugcourse.html">UG COURSES</a></li>
+            <li><a href="webpagepgcourse.html">PG COURSES</a></li>
+            <li><a href="webpagefee.html">FEES</a></li>
+            <li><a href="webpagescholarship.html">SCHOLARSHIP</a></li>
+	    <li><a href="webpagefeedback.html">FEEDBACK</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+        <marquee>GITAM Deemed University — Explore Our UG Programs</marquee>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>🎓 Undergraduate Courses at GITAM</h1>
+
+        <p><strong>GITAM</strong> (Gandhi Institute of Technology and Management), now known as GITAM (Deemed to be University), is a multi-campus university with locations in <strong>Visakhapatnam, Hyderabad, and Bengaluru</strong>. Founded in 1980, it offers a wide range of undergraduate and postgraduate programs across various disciplines, including technology, management, pharmacy, architecture, and more.</p>
+
+        <p>GITAM emphasizes a <strong>multidisciplinary approach</strong> to education, fostering holistic development and preparing students for careers through industry collaborations and research opportunities.</p>
+
+        <div class="highlight-box">
+            <h3>🌟 Key Aspects of GITAM</h3>
+            <ul>
+                <li><strong>Multidisciplinary Approach:</strong> Wide array of academic programs across different disciplines, promoting both specialization and interdisciplinary learning.</li>
+                <li><strong>Campus Locations:</strong> Campuses in Visakhapatnam, Hyderabad, and Bengaluru, each offering a unique learning environment.</li>
+                <li><strong>Industry Connections:</strong> Active engagement with industries through partnerships, advisory boards, and placement initiatives.</li>
+                <li><strong>Research Focus:</strong> Encourages research and innovation through TEPE and Makerspace facilities.</li>
+                <li><strong>Holistic Development:</strong> Aims to develop well-rounded individuals with strong ethical values and leadership skills.</li>
+                <li><strong>Placement Success:</strong> Strong placement record with various companies actively recruiting from its campuses.</li>
+                <li><strong>Global Exposure:</strong> Opportunities for students to gain global perspectives through international collaborations and exchange programs.</li>
+                <li><strong>Infrastructure:</strong> Modern infrastructure including well-equipped laboratories, libraries, and other facilities.</li>
+                <li><strong>Vision and Values:</strong> Guided by a vision to be a premier knowledge-driven institution grounded in integrity and compassion.</li>
+            </ul>
+        </div>
+
+        <h2>📚 UG Courses Offered</h2>
+        <p>GITAM offers a diverse range of undergraduate programs across multiple disciplines. Below is the complete list of UG courses:</p>
+
+        <div class="course-grid">
+            <!-- Science Courses -->
+            <div class="course-card">
+                <span class="badge">🔬 Science</span>
+                <h4>B.Sc. Biotechnology</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">🔬 Science</span>
+                <h4>B.Sc. Chemistry</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">🔬 Science</span>
+                <h4>B.Sc. Electronics</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">🔬 Science</span>
+                <h4>B.Sc. Food Science & Technology</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">🔬 Science</span>
+                <h4>B.Sc. Mathematics</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">🔬 Science</span>
+                <h4>B.Sc. Physics</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">🔬 Science</span>
+                <h4>B.Sc. Statistics</h4>
+            </div>
+
+            <!-- Engineering Courses -->
+            <div class="course-card">
+                <span class="badge">⚙️ Engineering</span>
+                <h4>B.Tech. Biomedical Engineering</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">⚙️ Engineering</span>
+                <h4>B.Tech. Biotechnology</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">⚙️ Engineering</span>
+                <h4>B.Tech. Civil Engineering with Computer Applications</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">⚙️ Engineering</span>
+                <h4>B.Tech. CSE (AI & ML)</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">⚙️ Engineering</span>
+                <h4>B.Tech. CSE (Cybersecurity)</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">⚙️ Engineering</span>
+                <h4>B.Tech. CSE (Data Science)</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">⚙️ Engineering</span>
+                <h4>B.Tech. Electrical & Communication Engineering</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">⚙️ Engineering</span>
+                <h4>B.Tech. Mechanical Engineering</h4>
+            </div>
+            <div class="course-card">
+                <span class="badge">⚙️ Engineering</span>
+                <h4>B.Tech. Robotics & Artificial Intelligence Engineering</h4>
+            </div>
+        </div>
+
+        <div class="highlight-box" style="border-left-color: #28a745;">
+            <h3>📞 Admissions Enquiry</h3>
+            <p><strong>Email:</strong> admissions@gitam.edu</p>
+            <p><strong>Phone:</strong> +91-12345-67890 (Mon–Sat, 9:00 AM – 6:00 PM)</p>
+            <p><strong>Website:</strong> www.gitam.edu</p>
+        </div>
+    </div>
+
+</body>
+</html>
